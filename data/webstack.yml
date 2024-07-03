@@ -4,7 +4,7 @@
   icon: fa-star
   links: 
     - title: Dribbble
-      logo: 
+      logo: https://cdn.dribbble.com/assets/favicon-192x192-d70ad402693bdd1a8460da7f9f3c590e817da7369c5287789ac968cf6947d214.png
       url: https://dribbble.com/
       description: 全球UI设计师作品分享平台。
     - title: 花瓣
@@ -13,14 +13,18 @@
       description: 收集灵感,保存有用的素材
     - title: Medium
       url: https://medium.com/
+      logo: https://miro.medium.com/v2/resize:fill:60:60/1*sHhtYhaCe2Uc3IU0IgKwIQ.png
       description: 高质量设计文章
     - title: Producthunt
       url: https://www.producthunt.com/
+      logo: https://ph-static.imgix.net/ph-ios-icon.png
       description: 发现新鲜有趣的产品
     - title: Youtube
       url: https://www.youtube.com/
+      logo: https://www.youtube.com/s/desktop/a7b1ec23/img/favicon_144x144.png
       description: 全球最大的学习分享平台
     - title: Google
+      logo: https://www.google.com/favicon.ico
       url: https://www.google.com/
       description: 全球最大的UI学习分享平台
 
@@ -48,25 +52,17 @@
     - term: 发现产品
       links:
         - title: Producthunt
-          logo: 
+          logo: https://cdn.dribbble.com/assets/favicon-192x192-d70ad402693bdd1a8460da7f9f3c590e817da7369c5287789ac968cf6947d214.png
           url: https://www.producthunt.com/
           description: 发现新鲜有趣的产品
-        - title: NEXT
-          logo: 
-          url: https://next.36kr.com/posts
-          description: 不错过任何一个新产品
         - title: 少数派
-          logo: 
+          logo: https://cdn-static.sspai.com/favicon/sspai.ico
           url: https://sspai.com/
           description: 高品质数字消费指南
         - title: 利器
-          logo: 
+          logo: https://liqi.io/images/favicon.ico
           url: https://liqi.io/
           description: 创造者和他们的工具
-        - title: Today
-          logo: 
-          url: http://today.itjuzi.com/
-          description: 为身边的新产品喝彩
         - title: 小众软件
           logo: 
           url: https://faxian.appinn.com/
