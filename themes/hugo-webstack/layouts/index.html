@@ -87,21 +87,23 @@
         <div class="main-content">
 <nav class="navbar user-info-navbar" role="navigation">
     <div class="navbar-content">
+        <!-- 天气-->
         <ul class="user-info-menu left-links list-inline list-unstyled">
             <li class="hidden-xs">
                 <a href="#" data-toggle="sidebar" ><i class="fa fa-bars"></i></a>
             </li>
-            <li>
-              <div id="he-plugin-simple"></div>
-              <script>WIDGET = {CONFIG: {"modules": "12034","background": 5,"tmpColor": "aaa","tmpSize": 16,"cityColor": "aaa","citySize": 16,"aqiSize": 16,"weatherIconSize": 24,"alertIconSize": 18,"padding": "30px 10px 30px 10px","shadow": "1","language": "auto","borderRadius": 5,"fixed": "false","vertical": "middle","horizontal": "left","key": "a922adf8928b4ac1ae7a31ae7375e191"}}</script>
-              <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
-            </li> 
-            <!-- 天气 end -->
+            <!-- <li> -->
+              <!-- <div id="he-plugin-simple"></div> -->
+              <!-- <script>WIDGET = {CONFIG: {"modules": "12034","background": 5,"tmpColor": "aaa","tmpSize": 16,"cityColor": "aaa","citySize": 16,"aqiSize": 16,"weatherIconSize": 24,"alertIconSize": 18,"padding": "30px 10px 30px 10px","shadow": "1","language": "auto","borderRadius": 5,"fixed": "false","vertical": "middle","horizontal": "left","key": "a922adf8928b4ac1ae7a31ae7375e191"}}</script> -->
+              <!-- <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script> -->
+            <!-- </li>  -->
       </ul>
         {{ if .Site.Params.Github.enable }}
         <ul class="user-info-menu right-links list-inline list-unstyled">
-            <li class="hidden-sm hidden-xs">
-                <a href="{{ .Site.Params.Github.url }}" target="_blank" title="Git Repo"><i class="fa fa-code"></i></a>
+            <li class="">
+                <a href="{{ .Site.Params.Github.url }}" target="_blank" title="Git Repo">
+                    <i class="fa-brands fa-github"></i>
+                </a>
             </li>
         </ul>
         {{ end }}
@@ -257,28 +259,7 @@
     </div id="overlay"> 
 <script type="text/javascript">
     $(document).ready(function() {
-        <!-- 黑暗和明亮模式 START -->
-        $('footer.main-footer .foot-button .bright-dark').click(function(){   
-            var currentIcon = $(this).find('i').attr('class'); 
-            if (currentIcon.includes('fa-moon')) {
-                $(this).find('i').removeClass('fa-moon').addClass('fa-sun');
-                $('body').removeClass('white').addClass('black');
-            }else if (currentIcon.includes('fa-sun')) { 
-                    $(this).find('i').removeClass('fa-sun').addClass('fa-moon');
-                    $('body').removeClass('black').addClass('white');
-            }        
-        });
-        <!-- 黑暗和明亮模式 END -->
-        <!-- 利用iowen API 获取网址icon START --> 
-        $(".geticon").each(function(){
-            var url = $(this).find('a').attr('href');
-            var apiUrl="https://api.iowen.cn/favicon/"+url.replace(/^https?:\/\//, '').replace(/\/.*$/, '')+".png"
-            if ($(this).find('img').attr('data-src').length === 0) {
-                $(this).find('img').attr('data-src', apiUrl);
-            }
-        })
-        <!-- END 利用iowen API 获取网址icon START-->
-        
+       
         $(document).on('click', '.has-sub', function(){
             var _this = $(this)
             if(!$(this).hasClass('expanded')) {
@@ -303,7 +284,6 @@
             var percentage = ((col_width + 30) / row_width).toFixed(2);
             if($('.sidebar-menu').hasClass('collapsed')) {
                 $('.has-sub.expanded > ul').attr("style","")
-                <!-- 缩小菜单栏 卡片列数+1 -->
                  switch (percentage){
                     case '0.33': 
                         $(".col-md-3").css("width", "25%");
@@ -318,10 +298,8 @@
                         $(".col-md-3").css("width", "14.286%");
                         break;                        
                 }
-                <!-- 缩小菜单栏 卡片列数+1 END-->
             } else {
                 $('.has-sub.expanded > ul').show()
-                <!-- 展开菜单栏 卡片列数-1 -->
                 switch (percentage){
                     case '0.25': 
                         $(".col-md-3").css("width", "33.333%");
@@ -336,7 +314,6 @@
                         $(".col-md-3").css("width", "16.666%");
                         break;                                                 
                 }
-                <!-- 展开菜单栏 卡片列数-1 END-->
             }
         })
         $("#main-menu li ul li").click(function() {
@@ -381,7 +358,7 @@
 <script type='text/javascript' src='./js/TweenMax.min.js?ver=1.13.1'></script>
 <script type='text/javascript' src='./js/nav.js?ver=2.0.0'></script>
 <script type='text/javascript' src='./js/lazyload.min.js?ver=2.0.0'></script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 {{ if .Site.Params.pinyin.enable }}<script src="https://cdn.jsdelivr.net/npm/pinyin-pro@3.19.0/dist/index.js"></script>{{ end }}
 <script type='text/javascript' src='./js/local-search.js'></script>
 </body>
