@@ -60,6 +60,10 @@
           logo: https://tool.oschina.net/img/favicon.ico
           url: https://tool.oschina.net/
           description: OSChina在线工具箱
+        - title: 在线格式化URL
+          logo:
+          url: https://www.urldecoder.org/
+          description: 在线格式化URL
 
 - taxonomy: 灵感采集
   icon: fa-regular fa-lightbulb
