@@ -48,6 +48,10 @@
   list:
     - term: 在线工具
       links:
+        - title: freeformatter.com
+          logo: https://www.freeformatter.com/favicon.ico
+          url: https://www.freeformatter.com/
+          description: JOSN格式化,转义/反转义,SQL/HTML 在线格式化/转换
         - title: json.cn
           logo: https://static.json.cn/r/img/favicon/favicon.ico
           url: https://www.json.cn/
