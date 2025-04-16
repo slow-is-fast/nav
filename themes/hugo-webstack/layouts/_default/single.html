@@ -19,8 +19,15 @@
 <link rel='stylesheet' id='bootstrap-css'  href='../css/bootstrap.css?ver=3.4.1' type='text/css' media='all' />
 <link rel='stylesheet' id='nav-css'  href='../css/nav.css?ver=2.0.0' type='text/css' media='all' />
 <script type='text/javascript' src='../js/jquery-1.11.1.min.js'></script>
-<!-- 不蒜子访问量统计 -->
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ .Site.Params.gtmId }}');</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ .Site.Params.gtmId }}"
+height="0" width="0" style="display:none;visibility:hidden"></noscript>
+<!-- End Google Tag Manager -->
 </head>
 <body class="page-body {{ if .Site.Params.darkmode.enable }}black{{ else }}white{{ end }}">
     <div class="page-container">
@@ -31,7 +38,7 @@
                     <div class="logo">
                         <a href="../" class="logo-expanded">
                             <img src="../images/logo.png" height="40" alt="" />
-                            &nbsp&nbsp{{ .Site.Title }}                            
+                            &nbsp&nbsp{{ .Site.Title }}
                         </a>
                         <a href="../" class="logo-collapsed">
                             <img src="../images/logo.png" height="40" alt="">
@@ -52,7 +59,7 @@
                                <span class="title">{{ .taxonomy }}</span>
                             </a>
                             <ul>
-                                {{ range .list }}    
+                                {{ range .list }}
                                 <li>
                                     <a href="../#{{ md5 .term }}" class="smooth">{{ .term }}</a>
                                 </li>
@@ -65,7 +72,7 @@
                                <i class="fa {{ .icon }} fa-fw"></i>
                                <span class="title">{{ .taxonomy }}</span>
                             </a>
-                        </li> 
+                        </li>
                     {{ end }}
                     {{ end }}
                     <li class="submit-tag">
@@ -76,7 +83,7 @@
                             <span class="tooltip-blue">在线编辑</span>
                         </a>
                     </li>
-                    {{ end }}                                        
+                    {{ end }}
                     <li>
                         <a href="../about">
                             <i class="fa fa-heart fa-fw"></i>
@@ -96,7 +103,7 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         {{ .Content }}
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -111,13 +118,13 @@
                 </div>
                 <div class="footer-inner">
                     <div class="footer-text">
-                        Copyright © {{ now.Format "2006"}} <a href=""><strong>{{ if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}author{{ end }}</strong>&nbsp;&nbsp;</a>              
+                        Copyright © {{ now.Format "2006"}} <a href=""><strong>{{ if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}author{{ end }}</strong>&nbsp;&nbsp;</a>
                     </div>
-                    <div class="footer-text">                       
+                    <div class="footer-text">
                         Design by <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank" style="color: rgb(13, 109, 252); font-weight: bold;">Webstack</a>&nbsp;&middot;&nbsp;Themes by <a href="https://github.com/oulh/hugo-webstack" target="_blank" style="color: rgb(13, 109, 252); font-weight: bold;">hugo-webstack</a>
                     </div>
                     <div class="footer-text">
-                        <span id="busuanzi_container_page_pv"  style="font-size:11px"> &nbsp;&nbsp; <i class="fa far fa-eye"></i> <span id="busuanzi_value_page_pv" style="color: rgb(13, 109, 252); font-weight: bold;"></span></span>                   
+                        <span id="busuanzi_container_page_pv"  style="font-size:11px"> &nbsp;&nbsp; <i class="fa far fa-eye"></i> <span id="busuanzi_value_page_pv" style="color: rgb(13, 109, 252); font-weight: bold;"></span></span>
                     </div>
                 </div>
             </footer>

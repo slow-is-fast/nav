@@ -19,6 +19,15 @@
 <link rel='stylesheet' id='bootstrap-css'  href='../css/bootstrap.css?ver=3.4.1' type='text/css' media='all' />
 <link rel='stylesheet' id='nav-css'  href='../css/nav.css?ver=2.0.0' type='text/css' media='all' />
 <script type='text/javascript' src='../js/jquery-1.11.1.min.js'></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ .Site.Params.gtmId }}');</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ .Site.Params.gtmId }}"
+height="0" width="0" style="display:none;visibility:hidden"></noscript>
+<!-- End Google Tag Manager -->
 </head>
 <body class="page-body {{ if .Site.Params.darkmode.enable }}black{{ else }}white{{ end }}">
     <div class="page-container">
@@ -50,7 +59,7 @@
                                <span class="title">{{ .taxonomy }}</span>
                             </a>
                             <ul>
-                                {{ range .list }}    
+                                {{ range .list }}
                                 <li>
                                     <a href="#{{ md5 .term }}" class="smooth">{{ .term }}</a>
                                 </li>
@@ -63,8 +72,8 @@
                                <i class="fa {{ .icon }} fa-fw"></i>
                                <span class="title">{{ .taxonomy }}</span>
                             </a>
-                        </li> 
-                    {{ end }}                 
+                        </li>
+                    {{ end }}
                     {{ end }}
                     <li class="submit-tag">
                     {{ if .Params.edit.enable }}
@@ -74,7 +83,7 @@
                             <span class="tooltip-blue">在线编辑</span>
                         </a>
                     </li>
-                    {{ end }}                    
+                    {{ end }}
                     <li>
                         <a href="../about">
                             <i class="fa fa-heart fa-fw"></i>
@@ -206,12 +215,12 @@
     {{ if .friend }}
     <div class="friendlink" style="margin-bottom:-40px">
         <div class="panel">
-        {{ range .friend }}            
+        {{ range .friend }}
             <!-- <h4 class="text-gray mb-4"> -->
-            <!-- <i class="fa fa-bookmark" id="friendlink" style="margin-right:10px"></i>友情链接</h4> -->                
+            <!-- <i class="fa fa-bookmark" id="friendlink" style="margin-right:10px"></i>友情链接</h4> -->
             <a href="{{ .url }}" rel="noopener" title="{{ .description }}" target="_blank">{{ .title }}</a>
         {{ end }}
-        </div> 
+        </div>
     </div>
     {{ end }}
     <!-- END 友情链接    -->
@@ -224,31 +233,31 @@
                     </a>
                     <a href="javascript:" id="search-btn">
                         <i class="fa fa-search"></i>
-                    </a>                   
+                    </a>
                     <a href="javascript:"class="bright-dark" title="日/夜">
                         <i class="fa {{ if .Site.Params.darkmode.enable }}fa-sun{{ else }}fa-moon{{ end }}"></i>
                     </a>
                 </div>
                 <div class="footer-inner">
                     <div class="footer-text">
-                        Copyright © {{ now.Format "2006"}} <a href=""><strong>{{ if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}author{{ end }}</strong>&nbsp;&nbsp;</a>              
+                        Copyright © {{ now.Format "2006"}} <a href=""><strong>{{ if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}author{{ end }}</strong>&nbsp;&nbsp;</a>
                     </div>
-                    <div class="footer-text">                       
+                    <div class="footer-text">
                         Design by <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank" style="color: rgb(13, 109, 252); font-weight: bold;">Webstack</a>&nbsp;&middot;&nbsp;Themes by <a href="https://github.com/oulh/hugo-webstack" target="_blank" style="color: rgb(13, 109, 252); font-weight: bold;">hugo-webstack</a>
                     </div>
                     <div class="footer-text">
-                        <span id="busuanzi_container_page_pv"  style="font-size:11px"> &nbsp;&nbsp; <i class="fa far fa-eye"></i> <span id="busuanzi_value_page_pv" style="color: rgb(13, 109, 252); font-weight: bold;"></span></span>                   
+                        <span id="busuanzi_container_page_pv"  style="font-size:11px"> &nbsp;&nbsp; <i class="fa far fa-eye"></i> <span id="busuanzi_value_page_pv" style="color: rgb(13, 109, 252); font-weight: bold;"></span></span>
                     </div>
                 </div>
             </footer>
         </div>
     </div>
-    <div id="overlay" style="display:none">  
+    <div id="overlay" style="display:none">
     <div id="search-box" >
         <a href="javascript:" id="close-button" title="点击周围任意地方也可以关闭。"><i class="fa far  fa-circle-xmark" ></i></a>
         <form onsubmit="return false;">
             <input type="text" id="search-input" placeholder="输入关键词{{ if .Site.Params.pinyin.enable }}、拼音或拼音首字母{{ end }}" autocomplete="off">
-            <i class="search-icon fa fa-search" aria-hidden="true"></i> 
+            <i class="search-icon fa fa-search" aria-hidden="true"></i>
         </form>
         <ul id="search-results">
             <span> 搜索本页内容</span>
@@ -256,19 +265,19 @@
         <p style="font-size:11px">键盘：Ctrl+F 开关，<strong>↑</strong> 和 <strong>↓</strong> 选择，Enter 访问</p>
     </div>
     <script>var rootPath = '../'</script>
-    </div id="overlay"> 
+    </div id="overlay">
 <script type="text/javascript">
     $(document).ready(function() {
         <!-- 黑暗和明亮模式 START -->
-        $('footer.main-footer .foot-button .bright-dark').click(function(){   
-            var currentIcon = $(this).find('i').attr('class');    
+        $('footer.main-footer .foot-button .bright-dark').click(function(){
+            var currentIcon = $(this).find('i').attr('class');
             if (currentIcon.includes('fa-moon')) {
                 $(this).find('i').removeClass('fa-moon').addClass('fa-sun');
                 $('body').removeClass('white').addClass('black');
-            }else if (currentIcon.includes('fa-sun')) { 
+            }else if (currentIcon.includes('fa-sun')) {
                     $(this).find('i').removeClass('fa-sun').addClass('fa-moon');
                     $('body').removeClass('black').addClass('white');
-            }        
+            }
         });
         $(".geticon").each(function(){
             var url = $(this).find('a').attr('href');
@@ -283,7 +292,7 @@
                setTimeout(function(){
                     _this.find('ul').attr("style","")
                }, 300);
-              
+
             } else {
                 $('.has-sub ul').each(function(id,ele){
                     var _that = $(this)
@@ -302,34 +311,34 @@
             if($('.sidebar-menu').hasClass('collapsed')) {
                 $('.has-sub.expanded > ul').attr("style","")
                  switch (percentage){
-                    case '0.33': 
+                    case '0.33':
                         $(".col-md-3").css("width", "25%");
                         break;
-                    case '0.25': 
+                    case '0.25':
                         $(".col-md-3").css("width", "20%");
                         break;
-                    case '0.20': 
+                    case '0.20':
                         $(".col-md-3").css("width", "16.666%");
                         break;
-                    case '0.17': 
+                    case '0.17':
                         $(".col-md-3").css("width", "14.286%");
-                        break;                        
+                        break;
                 }
             } else {
                 $('.has-sub.expanded > ul').show()
                 switch (percentage){
-                    case '0.25': 
+                    case '0.25':
                         $(".col-md-3").css("width", "33.333%");
                         break;
-                    case '0.20': 
+                    case '0.20':
                         $(".col-md-3").css("width", "25%");
                         break;
-                    case '0.17': 
+                    case '0.17':
                         $(".col-md-3").css("width", "20%");
                         break;
-                    case '0.14': 
+                    case '0.14':
                         $(".col-md-3").css("width", "16.666%");
-                        break;                                                 
+                        break;
                 }
             }
         })
