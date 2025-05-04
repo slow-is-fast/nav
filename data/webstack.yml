@@ -681,16 +681,18 @@
           url: https://anyway.fm/
           description: 设计杂谈 • UI 设计师 JJ 和 Leon 主播的设计播客
 
+
 - taxonomy: 小说网站
   icon: fa-book
-  friend:
+  links:
     - title: 飘天文学
+      logo: https://www.piaotia.com/css/logo.gif
       url: https://www.piaotia.com/
       description: 飘天文学-飘越天空的小说阅读网
     - title: 书海阁小说网
+      logo: https://www.shuhaige.net/
       url: https://www.shuhaige.net/
       description: 笔下之趣，阁里阅读
-
 
 - taxonomy: 友情链接
   icon: fa-link
