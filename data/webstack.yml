@@ -686,13 +686,14 @@
   icon: fa-book
   links:
     - title: 飘天文学
-      logo: https://www.piaotia.com/css/logo.gif
       url: https://www.piaotia.com/
       description: 飘天文学-飘越天空的小说阅读网
     - title: 书海阁小说网
-      logo: https://www.shuhaige.net/
       url: https://www.shuhaige.net/
       description: 笔下之趣，阁里阅读
+    - title: 速读谷
+      url: https://www.sudugu.com/
+      description: 谷内无错 可以速读    
 
 - taxonomy: 友情链接
   icon: fa-link
