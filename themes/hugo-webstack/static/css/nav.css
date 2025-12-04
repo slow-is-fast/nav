@@ -59,7 +59,11 @@ footer.main-footer .foot-button a:hover{background-color:rgba(44,46,47,.1)}foote
 .sidebar-menu .main-menu a>span{display:inline-block}
 .sidebar-menu .main-menu a:hover{color:#fff}
 .sidebar-menu.fixed{height:100%}
-.sidebar-menu.fixed .sidebar-menu-inner{position:fixed;left:0;top:0;bottom:0;width:inherit;overflow:hidden}
+.sidebar-menu.fixed .sidebar-menu-inner{position:fixed;left:0;top:0;bottom:0;width:inherit;overflow-y:auto;overflow-x:hidden}
+.sidebar-menu.fixed .sidebar-menu-inner::-webkit-scrollbar{width:6px}
+.sidebar-menu.fixed .sidebar-menu-inner::-webkit-scrollbar-thumb{background-color:rgba(255,255,255,0.2);border-radius:3px}
+.sidebar-menu.fixed .sidebar-menu-inner::-webkit-scrollbar-thumb:hover{background-color:rgba(255,255,255,0.4)}
+.sidebar-menu.fixed .sidebar-menu-inner::-webkit-scrollbar-track{background-color:transparent}
 .sidebar-menu .main-menu ul{display:none;margin:0;padding:0;overflow:hidden;list-style:none}
 .sidebar-menu .main-menu ul li{position:relative}
 @media screen and (min-width:768px){.sidebar-menu .main-menu ul li.is-hidden{left:-20px;zoom:1;filter:alpha(opacity=0);-webkit-opacity:0;-moz-opacity:0;opacity:0}
